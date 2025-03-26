@@ -1,0 +1,11 @@
+name: 'plugin-metric-prometheus'
+version: '0.0.0'
+displayName: Metric - Prometheus
+description: Metric Driver for Prometheus
+main: lib/index.js
+icon:
+  src: ale.svg
+  background: transparent
+  scale: 1
+  shape: square
+
