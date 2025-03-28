@@ -4,7 +4,7 @@ displayName: Metric - Prometheus
 description: Metric Driver for Prometheus
 main: lib/index.js
 icon:
-  src: ale.svg
+  src: logo.svg
   background: transparent
   scale: 1
   shape: square
