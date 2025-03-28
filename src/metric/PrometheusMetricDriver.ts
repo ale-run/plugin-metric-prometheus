@@ -1,15 +1,12 @@
 import { ClusterMetricDriver, IDeployment, MetricItem, MetricFilter, MetricData, Logger, AnyObject } from '@ale-run/runtime';
 import { PrometheusApi } from './PrometheusApi';
 
-
 const logger = Logger.getLogger('app:PrometheusMetricDriver');
 
 export class PrometheusMetricDriver extends ClusterMetricDriver {
-
   private readonly prometheusApi: PrometheusApi = new PrometheusApi();
 
   public async getMetricItems(deployment: IDeployment): Promise<MetricItem[]> {
-
     return [
       {
         name: 'cpu',
@@ -41,7 +38,7 @@ export class PrometheusMetricDriver extends ClusterMetricDriver {
         name: 'outbound',
         title: 'Network OUT',
         unit: 'b'
-      },
+      }
     ];
   }
 
@@ -66,7 +63,6 @@ export class PrometheusMetricDriver extends ClusterMetricDriver {
   // ]
 
   public async getMetric(deployment: IDeployment, name: string, options: MetricFilter): Promise<MetricData> {
-
     logger.debug(`[METRIC][${deployment.name}]metricName=${name}`);
 
     if (this.cluster.env.PROMETHEUS_URL === undefined) {
@@ -111,7 +107,5 @@ export class PrometheusMetricDriver extends ClusterMetricDriver {
 
     logger.info(`[METRIC]`, metricData);
     return metricData;
-
   }
-
 }
