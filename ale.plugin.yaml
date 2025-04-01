@@ -1,10 +1,14 @@
-name: 'plugin-metric-prometheus'
-version: '0.0.0'
+name: '@ale-run/plugin-metric-prometheus'
+version: '0.1.0'
 displayName: Metric - Prometheus
 description: Metric Driver for Prometheus
+license: Apache-2.0
+author: ale
+homepage: https://ale.run
+repository: ale-run/plugin-metric-prometheus
 main: lib/index.js
 icon:
-  src: ale.svg
+  src: logo.svg
   background: transparent
   scale: 1
   shape: square
